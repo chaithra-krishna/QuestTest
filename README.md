@@ -18,3 +18,9 @@
 -   Run "mvn clean install" command on the codebase - to genarate war file
 -   Push the war file to server (Tomcat 7) and start the server - the application can be accessed through http://localhost:8080/quest/welcome.html
 
+### Application Walk-Through
+
+The landing page displays two links
+
+![]({{site.baseurl}}/http://pasteboard.co/uHQT0OlKR.png)
+

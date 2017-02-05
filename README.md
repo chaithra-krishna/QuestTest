@@ -22,5 +22,5 @@
 
 The landing page displays two links
 
-![]({{site.baseurl}}/http://pasteboard.co/uHQT0OlKR.png)
+![]({{site.baseurl}}/http://i65.tinypic.com/rjl1eg.png)
 

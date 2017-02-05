@@ -1,4 +1,4 @@
-## QuestTest
+## Quest Developer Test
 ### Technology stack
 - 	Spring MVC (spring 4 -annotation driven)
 -   Jquery

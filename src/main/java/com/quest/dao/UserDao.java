@@ -16,4 +16,6 @@ public interface UserDao {
 	public void addUser(Person person);
 
 	public List<Person> getAllUser();
+
+	public boolean isUniquePPS(Person person);
 }

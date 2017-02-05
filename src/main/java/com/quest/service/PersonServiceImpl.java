@@ -29,4 +29,8 @@ public class PersonServiceImpl implements PersonService {
 		return userDao.getAllUser();
 	}
 
+	public boolean isUniquePPS(Person person) {
+		return userDao.isUniquePPS(person);
+	}
+
 }

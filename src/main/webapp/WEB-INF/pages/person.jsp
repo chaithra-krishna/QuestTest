@@ -8,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Quest</title>
 <link href="bootstrap.min.css" rel="stylesheet">
+
 <script src="jquery.min.js" type="text/javascript"></script>
 <script src="jquery.form.js" type="text/javascript"></script>
 <script src="jquery.validate.js" type="text/javascript"></script>
@@ -24,7 +25,7 @@
 					required : true
 				},
 				mobileNumber : {
-					required : true,
+					
 					number : true
 				}
 			},
@@ -37,7 +38,7 @@
 					required : 'PPS number is required'
 				},
 				mobileNumber : {
-					required : 'Phone number must begin with 08 prefix',
+					
 					number : 'Phone number can contain only numbers'
 				}
 			},
@@ -50,55 +51,72 @@
 </script>
 </head>
 <body>
-	<div class="container" style="padding-top: 50px;">
-	<p>Please fill the below form</p>
-
-	<form:form id="myform" class="form-horizontal" method="post" modelAttribute="userForm"
+	
+	
+<a href="welcome.html"><img border="0" alt="Back to home" src="home.png" style="width: 10%;height: 0%;padding-left: 36px;padding-top: 20px;"></a>
+	<form:form id="myform" style="padding-left: 210px;" method="post" modelAttribute="userForm"
 		action="${addPerson}">
-				<fieldset>
-					<div class="control-group">
-						<label class="control-label">Name</label>
-						<div class="controls">
+		<p style="padding-left: 100px;padding-top: 50px;color: darkgrey;">Please fill the below form</p>
+				<table>
+					<tr>
+						<td>Name</td>
+						<td>
+							
 							<form:input path="name" />
-							<span class="help-inline"><form:errors path="name" /></span>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label">PPS Number</label>
-						<div class="controls">
+							<form:errors path="name" />
+						
+						</td>
+					</tr>
+					
+					<tr>
+						<td>PPS Number</td>
+						<td>
+							
 							<form:input path="ppsNumber" />
-							<span class="help-inline"><form:errors path="ppsNumber" /></span>
-						</div>
-					</div>
+							<form:errors path="ppsNumber" />
+						
+						
+						</td>
+					</tr>
 					
-					<div class="control-group">
-						<label class="control-label">Date Of Birth</label>
-						<div class="controls">
-							<form:input type="date" path="dobInString" />
-							<label class="error"><form:errors path="dobInString" /></label>
-						</div>
-					</div>
+					<tr>
+						<td>Date Of Birth</td>
+						<td>
+							
+							<form:input style="width: 200px;" type="date" path="dobInString" />
+							<form:errors path="dobInString" />
+						
+						
+						</td>
+					</tr>
 					
-					<div class="control-group">
-						<label class="control-label">Mobile Phone</label>
-						<div class="controls">
+					<tr>
+						<td>Mobile Phone</td>
+						<td>
+							
 							<form:input path="mobileNumber" />
-							<span class="help-inline"><form:errors path="mobileNumber" /></span>
-						</div>
-					</div>
-					<div class="form-actions">
+							<form:errors path="mobileNumber" />
+						
+						
+						</td>
+					</tr>
+					
+					
+				</table>
+				
+						<div style="padding-left: 105px;padding-top: 12px;">
 						<button type="submit" class="btn btn-primary">Submit</button>
 						<button type="reset" class="btn">Cancel</button>
 					</div>
-				</fieldset>
+					
+				
 			</form:form>
-			
-			
 			
 	<c:if test="${not empty msg}">
 		<p>${msg}</p>
 	</c:if>
-	<a href="welcome.html">Back to home</a>
-	</div>
+	
+	
+	
 </body>
 </html>

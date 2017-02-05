@@ -7,17 +7,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Quest</title>
+<link href="bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<a href="welcome.html"><img border="0" alt="Back to home" src="home.png" style="width: 10%;height: 0%;padding-left: 36px;padding-top: 20px;"></a>
 
-<h1>User Details</h1>
 
 <c:if test="${not empty noPerson}">
 	<p>${noPerson}</p>
 </c:if>
 
 <c:if test="${empty noPerson}">
-	<table border="1">
+<p style="padding-left: 379px;padding-top: 42px;color: darkgrey;padding-bottom: 20px;font-size: x-large;">User Details</p>
+<div class="datagrid">
+	<table border="1" style="padding-left: 210px;">
+	
 		<thead>
 				<tr>
 					<th>Name</th>
@@ -43,7 +47,7 @@
 		</tr>
 		</c:forEach>
 	</table>
+	</div>
 </c:if>
-<a href="welcome.html">Back to home</a>
 </body>
 </html>

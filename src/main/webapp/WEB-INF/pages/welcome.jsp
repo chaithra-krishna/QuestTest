@@ -6,13 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Quest</title>
+<link href="bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>welcome</h1>
+<p class="homeheader">Person Demographics</p>
 
-<a href="addPerson.html">add details</a></br>
-<a href="getAllPersons.html">view all details</a></br>
+<a href="addPerson.html">Add a new record</a></br>
+<a href="getAllPersons.html">List all records</a></br>
 <c:if test="${not empty msg}">
 	<p>${msg}</p>
 </c:if>

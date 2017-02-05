@@ -8,11 +8,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import com.quest.model.Person;
+import com.quest.service.PersonService;
 
 /**
  * @author Macbook pro
@@ -20,6 +22,9 @@ import com.quest.model.Person;
  */
 @Component
 public class UserFormValidator implements Validator {
+
+	@Autowired
+	private PersonService personService;
 
 	public boolean supports(Class<?> person) {
 		return Person.class.equals(person);
@@ -42,6 +47,9 @@ public class UserFormValidator implements Validator {
 		}
 		if (null == person.getPpsNumber() || person.getPpsNumber().trim().isEmpty()) {
 			errors.rejectValue("ppsNumber", "pps.number.required");
+		} else if (personService.isUniquePPS(person)) {
+			System.out.println("duplicate");
+			errors.rejectValue("ppsNumber", "pps.number.unique");
 		}
 		if (null == person.getDateOfBirth()) {
 			errors.rejectValue("dobInString", "date.required");

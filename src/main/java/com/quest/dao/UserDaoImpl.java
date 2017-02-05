@@ -34,4 +34,8 @@ public class UserDaoImpl implements UserDao {
 		return new ArrayList<Person>(personList);
 	}
 
+	public boolean isUniquePPS(Person person) {
+		return personList.contains(person);
+	}
+
 }
